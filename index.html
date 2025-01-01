@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izyan Mini mart-Homepage</title>
+    <style>
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f3ef;
+        }
+
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: blanchedalmond;
+            padding: 1em 2em;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar img {
+            height: 50px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            padding: 0.5em 1em;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: #ffaf1d;
+            color: white;
+        }
+
+        
+        .mart {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            animation: slide 15s infinite;
+        }
+
+        .carousel img {
+            min-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            33% { transform: translateX(0); }
+            40% { transform: translateX(-100%); }
+            66% { transform: translateX(-100%); }
+            73% { transform: translateX(-200%); }
+            100% { transform: translateX(-200%); }
+        }
+
+        .mart-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 2;
+        }
+
+        .mart::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .mart h1 {
+            font-family: Times New Roman, serif;
+            text-shadow: 2px 0 black, 0 2px black, 2px 0 black;
+            font-size: 5em;
+            margin: 0.5em 0;
+            color: #DAA520;
+        }
+
+        .mart h2 {
+            font-size: 3em;
+            margin: 0.5em 0;
+            text-shadow: 2px 0 floralwhite, 0 2px white, 2px 0 white;
+            color: coral;
+        }
+
+        .mart p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #fff;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 3;
+        }
+
+        .carousel-indicators span {
+            display: block;
+            width: 15px;
+            height: 15px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+        }
+
+        .carousel-indicators span.active {
+            background-color: white;
+        }
+
+        
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: blanchedalmond;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="logomart.jpg" alt="Logo">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="product.html">Product</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <section class="mart">
+        <div class="carousel">
+            <img src="mart1.jpg" alt="Mart Image 1">
+            <img src="mart2.jpg" alt="Mart Image 2">
+            <img src="mart6.jpg" alt="Mart Image 6">
+        </div>
+        <div class="mart-content">
+            <h1>Izyan Mini Mart</h1>
+            <h2>Let’s Visit Us!</h2>
+            <p style="font-weight: bold;">OPEN : 11a.m - 11.30pm</p>
+        </div>
+        <div class="carousel-indicators">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2024 Izyan Mini Mart. All Rights Reserved.
+    </footer>
+</body>
+</html>
